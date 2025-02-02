@@ -17,7 +17,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Dep
-      run: sudo apt update
+      run: |
+           sudo apt update
            sudo apt install libzmq5
     - name: Build
       run: cargo build --verbose
